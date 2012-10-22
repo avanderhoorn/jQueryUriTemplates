@@ -1,0 +1,1 @@
+For more information see - http://jqueryuritemplates.anthonyvanderhoorn.com/
