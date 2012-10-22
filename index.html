@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery URI Template Plugin</title>
+        <meta name="viewport" content="width=device-width" /> 
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+        <link rel="stylesheet" href="default.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <header class="site-header cf" role="banner">
+                <div class="site-logo">
+                    jQuery Uri Templates
+                </div>
+                <ul class="site-nav inline-block-list">
+                    <li><a href="https://github.com/avanderhoorn/jQueryUriTemplates"
+                           data-ga-category="Outbound links"
+                           data-ga-action="Nav click"
+                           data-ga-label="Source code">Source code</a></li> 
+                    <li><a href="https://github.com/avanderhoorn"
+                           data-ga-category="Outbound links"
+                           data-ga-action="Nav click"
+                           data-ga-label="Other projects">Other projects</a></li>
+                </ul>
+            </header><!-- end site-header -->
+
+            <div class="site-promo">
+                <h1>Simple jQuery plugin providing Uri Templates to Ajax requests</h1>
+                <p class="description"><strong>jQuery Uri Templates</strong> is a simple extension, that provides an implemenation of <a href="http://tools.ietf.org/html/rfc6570">RFC6570</a> to any Ajax request within your application.</p>
+
+                <div class="cta-option">
+                    <a class="btn-download"
+                       href="https://github.com/avanderhoorn/jQueryUriTemplates/zipball/v1.0"
+                       data-ga-category="Download"
+                       data-ga-action="Download - top"
+                       data-ga-label="v1.0">
+                        <strong>Download</strong>
+                        <span class="version">v1.0</span>
+                    </a>
+                    <div class="last-update">
+                        5.55KB (2.13KB gzipped)
+                    </div>
+                </div>
+                <div class="cta-option">
+                    <a class="btn-download btn-download-alt"
+                       href="https://github.com/avanderhoorn/jQueryUriTemplates/zipball/v1.0"
+                       data-ga-category="Outbound links"
+                       data-ga-action="Get custom build"
+                       data-ga-label="v4.0.1">
+                        Unminified
+                    </a>
+                </div>
+            </div><!-- end site-promo -->
+        </div>
+
+        <div class="site-content">
+            <div class="container">
+                <h2>Create more standards complient Uri's.</h2>
+                <p>
+                A <strong>URI Template</strong> is a compact sequence of characters for describing a
+                range of Uniform Resource Identifiers through variable expansion.
+                The <a href="http://tools.ietf.org/html/rfc6570">RFC6570</a>
+                specification defines the URI Template syntax and the process
+                for expanding a URI Template into a URI reference, along with
+                guidelines for the use of URI Templates on the Internet.</p>
+                <p>
+                URI Templates provide a mechanism for abstracting a space of resource
+                identifiers such that the variable parts can be easily identified and
+                described. URI Templates can have many uses, including the discovery
+                of available services, configuring resource mappings, defining
+                computed links, specifying interfaces, and other forms of
+                programmatic interaction with resources.</p>
+
+                <h2>How to start using jQuery Uri Templates.</h2>
+                <p>
+                Using <strong>jQuery Uri Templates</strong> couldn't be simiplier. You can even 
+                leverage your existing requests and simply add an addition property 
+                <code>tokens</code> to your options.
+                </p>
+                <p>
+                The below is an example of how you can use the pluign:</p>
+                <table class="examples">
+                    <tr>
+                        <th width="20%">Include script references:</th>
+                        <td class="code sample"> 
+                            &lt;script src="jquery.min.js"&gt;&lt;/script&gt;<br />
+                            &lt;script src="jquery-uritemplate.1.0.js"&gt;&lt;/script&gt; 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 1:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/foo{?query,number}',
+    tokens: {query:'person', number: '1234'}
+});</pre>
+                            Result:<br />
+                            <em class="result1"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 2:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/foo{?query,number}',
+    tokens: { number: '1234'}
+});</pre>
+                            Result:<br />
+                            <em class="result2"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 3:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/map?{x,y}',
+    tokens: {x: '123', y: '987'}
+});</pre>
+                            Result:<br />
+                            <em class="result3"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 4:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/map?{x,y}',
+    tokens: {x: '123' }
+});</pre>
+                            Result:<br />
+                            <em class="result4"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 5:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/foo?fixed=yes{&x}',
+    tokens: {x: '123' }
+});</pre>
+                            Result:<br />
+                            <em class="result5"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 6:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/foo{?list}',
+    tokens: {list: [ "red", "green", "blue" ] }
+});</pre>
+                            Result:<br />
+                            <em class="result6"></em> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">Example 7:</th>
+                        <td class="sample">
+<pre>$.ajax({
+    url: '/foo{?list*}',
+    tokens: {list: [ "red", "green", "blue" ] }
+});</pre>
+                            Result:<br />
+                            <em class="result7"></em> 
+                        </td>
+                    </tr>
+                </table>
+
+                <h2>More information and Credits.</h2>
+                <p>
+                To find out more information on the Uri Templates and what is supported,
+                look over the <a href="http://tools.ietf.org/html/rfc6570">RFC6570</a> specification.
+                </p> 
+                <p>
+                jQuery Uri Templates use the <a href="https://github.com/fxa/uritemplate-js">Uri Template</a> library created by <a href="https://github.com/fxa">fxa</a>.
+                </p>
+            </div>
+        </div>
+
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container">
+                <p>
+                    <a class="twitter-share-button"
+                       href="https://twitter.com/share"
+                       data-count="none"
+                       data-lang="en"
+                       data-via="anthony_vdh"
+                       data-size="large"
+                       data-text="jQuery Uri Templates - Supports RFC6570 for all Ajax requests."
+                       data-url="http://html5boilerplate.com/">Tweet</a>
+                   &nbsp;
+                   <a class="twitter-follow-button"
+                      href="https://twitter.com/anthony_vdh"
+                      data-show-count="false"
+                      data-lang="en"
+                      data-size="large">Follow @anthony_vdh</a>
+                </p>
+
+                Project currently maintained by <a href="http://blog.anthonyvanderhoorn.com/">Anthony van der Hoorn</a>.
+            </div>
+        </footer><!-- end site-footer -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="jquery-uritemplate.1.0.min.js"></script>  
+        <script src="default.min.js"></script>  
+        
+        <script>
+            // Twitter widgets
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='http://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');
+        </script>
+    </body>
+</html>
