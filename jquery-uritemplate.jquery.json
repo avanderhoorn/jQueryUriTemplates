@@ -1,0 +1,35 @@
+{
+    "name": "jQuery-uritemplate",
+    "title": "jQuery Uri Templates",
+    "description": "jQuery Uri Templates is a simple extension, that provides an implementation of RFC6570 to any Ajax request within your application.",
+    "keywords": [
+        "Uri",
+        "Templates",
+        "RFC6570"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Anthony van der Hoorn",
+        "url": "https://github.com/avanderhoorn"
+    },
+    "maintainers": [
+        {
+            "name": "Anthony van der Hoorn",
+            "email": "anthony.vanderhoorn@gmail.com",
+            "url": "http://blog.anthonyvanderhoorn.com/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/avanderhoorn/jQueryUriTemplates/issues",
+    "homepage": "http://jqueryuritemplates.anthonyvanderhoorn.com/",
+    "docs": "http://jqueryuritemplates.anthonyvanderhoorn.com/",
+    "download": "https://github.com/avanderhoorn/jQueryUriTemplates/",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
