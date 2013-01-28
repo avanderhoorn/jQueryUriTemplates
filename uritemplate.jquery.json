@@ -1,5 +1,5 @@
 {
-    "name": "jQuery-uritemplate",
+    "name": "uritemplate",
     "title": "jQuery Uri Templates",
     "description": "jQuery Uri Templates is a simple extension, that provides an implementation of RFC6570 to any Ajax request within your application.",
     "keywords": [
