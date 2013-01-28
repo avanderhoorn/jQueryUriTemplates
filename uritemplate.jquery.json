@@ -5,7 +5,9 @@
     "keywords": [
         "Uri",
         "Templates",
-        "RFC6570"
+        "RFC6570",
+		"Form",
+		"Ajax"
     ],
     "version": "1.0",
     "author": {
